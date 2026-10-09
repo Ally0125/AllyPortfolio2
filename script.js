@@ -176,4 +176,15 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
+  
+    /* ---------- Back to top button ---------- */
+  var toTop = document.querySelector('.to-top');
+
+  if (toTop) {
+    var updateToTop = function () {
+      toTop.classList.toggle('is-visible', window.scrollY > 400);
+    };
+    window.addEventListener('scroll', updateToTop, { passive: true });
+    updateToTop();
+  }
 })();
