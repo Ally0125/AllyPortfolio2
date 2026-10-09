@@ -153,6 +153,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .sticker-a { top: 36px; left: 4%; transform: rotate(-6deg); }
 .sticker-b { top: 46%; right: 0; transform: rotate(5deg); background: var(--coral); color: #fff; }
 .sticker-c { bottom: 34px; left: 0; transform: rotate(-3deg); background: var(--mint); color: var(--mint-text); }
+.sticker-d { bottom: 100px; right: 2%; transform: rotate(4deg); background: var(--lavender); color: var(--lavender-text); }
 
 .stats {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
