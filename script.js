@@ -52,7 +52,7 @@
           roleEl.textContent = word.slice(0, charIndex);
           if (charIndex === word.length) {
             deleting = true;
-            return setTimeout(tick, 300);
+            return setTimeout(tick, 100);
           }
           return setTimeout(tick, 80);
         }
