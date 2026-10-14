@@ -29,7 +29,7 @@
   /* ---------- Rotating role text ---------- */
   var roleEl = document.getElementById('role');
   var cursorEl = document.querySelector('.cursor');
-  var roles = ['Software Testing', 'App Testing', 'Product Analysis', 'Product Management', "UIUX Design"];
+  var roles = ['Software Testing', 'App Testing', 'Product Analysis', 'Product Management', 'UIUX Design'];
 
   if (roleEl) {
     if (reduceMotion) {
