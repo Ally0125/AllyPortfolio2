@@ -35,6 +35,7 @@
     if (reduceMotion) {
       if (cursorEl) cursorEl.style.display = 'none';
       var idx = 0;
+      roleE1.textContent = roles[0];
       setInterval(function () {
         idx = (idx + 1) % roles.length;
         roleEl.textContent = roles[idx];
@@ -51,7 +52,7 @@
           roleEl.textContent = word.slice(0, charIndex);
           if (charIndex === word.length) {
             deleting = true;
-            return setTimeout(tick, 1800);
+            return setTimeout(tick, 300);
           }
           return setTimeout(tick, 80);
         }
