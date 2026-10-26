@@ -53,21 +53,21 @@
           roleEl.textContent = word.slice(0, charIndex);
           if (charIndex === word.length) {
             deleting = true;
-            return setTimeout(tick, 1800);
+            return setTimeout(tick, 2500);
           }
-          return setTimeout(tick, 80);
+          return setTimeout(tick, 150);
         }
         charIndex--;
         roleEl.textContent = word.slice(0, charIndex);
         if (charIndex === 0) {
           deleting = false;
           roleIndex = (roleIndex + 1) % roles.length;
-          return setTimeout(tick, 350);
+          return setTimeout(tick, 700);
         }
-        setTimeout(tick, 40);
+        setTimeout(tick, 80);
       };
 
-      setTimeout(tick, 2000);
+      // setTimeout(tick, 2000);
     }
   }
 
