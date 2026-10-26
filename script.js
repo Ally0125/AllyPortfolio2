@@ -26,24 +26,25 @@
     }
   });
 
-  /* ---------- Rotating role text ---------- */
+    /* ---------- Rotating role text ---------- */
   var roleEl = document.getElementById('role');
   var cursorEl = document.querySelector('.cursor');
   var roles = ['Software Testing', 'App Testing', 'Product Analysis', 'Product Management', 'UIUX Design'];
 
   if (roleEl) {
+    roleEl.textContent = roles[0];
+
     if (reduceMotion) {
       if (cursorEl) cursorEl.style.display = 'none';
       var idx = 0;
-      roleE1.textContent = roles[0];
       setInterval(function () {
         idx = (idx + 1) % roles.length;
         roleEl.textContent = roles[idx];
       }, 3000);
     } else {
       var roleIndex = 0;
-      var charIndex = 0;
-      var deleting = false;
+      var charIndex = roles[0].length;
+      var deleting = true;
 
       var tick = function () {
         var word = roles[roleIndex];
@@ -52,7 +53,7 @@
           roleEl.textContent = word.slice(0, charIndex);
           if (charIndex === word.length) {
             deleting = true;
-            tick();
+            return setTimeout(tick, 1800);
           }
           return setTimeout(tick, 80);
         }
@@ -66,7 +67,7 @@
         setTimeout(tick, 40);
       };
 
-      setTimeout(tick, 1800);
+      setTimeout(tick, 2000);
     }
   }
 
