@@ -67,7 +67,7 @@
         setTimeout(tick, 80);
       };
 
-      // setTimeout(tick, 2000);
+      setTimeout(tick, 2000);
     }
   }
 
