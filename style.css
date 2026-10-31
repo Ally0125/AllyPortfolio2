@@ -316,10 +316,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .site-nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
 }
 @media (max-width: 760px) {
-  .stats { grid-template-columns: 1fr; text-align: left; }
-  .stats div { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 12px; }
-  .stats dt { order: 1; }
-  .stats dd { order: 2; }
+  .stats { grid-template-columns: 1fr; text-align: left; gap: 16px; }
+  .stats div { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+  .stats dt { order: 1; flex: 1; }
+  .stats dd { order: 2; white-space: nowrap; text-align: right; font-size: 1.8rem; }
 }
 @media (max-width: 520px) {
   html { font-size: 106%; }
